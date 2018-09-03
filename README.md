@@ -1,4 +1,4 @@
-# Project 1: Nagivation with Deep Q-Network by Tony Ho
+# Project 1: Navigation with Deep Q-Network by Tony Ho
 
 ### Project Environment Details
 
@@ -14,6 +14,8 @@ The action space is of type discrete with a size of 4
 
 Make sure to install the packages Unity ML-Agents, NumPy, PyTorch (v0.4) and Matlibplot  
 Also, install Unity3D with the Linux Build Support option enabled
+
+### Instructions
 
 In the file 'dqn_navigation.py', change NUM_EPISODES to a low number like 10.  Then, from the command line, type in 'python ./PROJECT_PATH/dqn_navigation.py'  
 By default, this file is set to load the trained agent.  You can watch the agent navigate the environment and the score is printed in the command line window.  After every 100 episodes, the average score is printed.  
