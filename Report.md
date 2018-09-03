@@ -6,9 +6,7 @@ project details
 
 ### Plot of Rewards
 
-[image1]:'Figure_1'
-
-![Trained Agent][image1]
+![Trained Agent](./Figure_1.png)
 
 ### Ideas for Future Work
 
