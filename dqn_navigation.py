@@ -7,14 +7,15 @@ import matplotlib.pyplot as plt
 
 FILEPATH = 'dqn_navigation.pt'
 IS_TRAINING = False
+NO_GRAPHICS = False
 
-env = UnityEnvironment(file_name="Banana.exe")
+env = UnityEnvironment(file_name="Banana.exe", no_graphics = NO_GRAPHICS)
 
 brain_name = env.brain_names[0]
 brain = env.brains[brain_name]
 
 # reset the environment
-env_info = env.reset(train_mode=IS_TRAINING)[brain_name]
+env_info = env.reset(train_mode=NO_GRAPHICS or IS_TRAINING)[brain_name]
 
 # number of agents in the environment
 print('Number of agents:', len(env_info.agents))
@@ -48,7 +49,7 @@ scores = []
 scores_window = deque(maxlen=100)
 
 for i_episode in range(1, NUM_EPISODES + 1):
-    env_info = env.reset(train_mode=IS_TRAINING)[brain_name] # reset the environment
+    env_info = env.reset(train_mode=NO_GRAPHICS or IS_TRAINING)[brain_name] # reset the environment
     state = env_info.vector_observations[0]            # get the current state
     score = 0                                          # initialize the score
     while True:
